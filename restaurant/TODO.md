@@ -223,15 +223,3 @@
 
 ---
 
-## Rules (read once, then forget)
-
-1. **One commit per section.** No "big bang" commit at the end.
-2. **Check box only after `git push`.** Not after `git commit`.
-3. **No new sections** beyond the 7. If you want to add → update BRIEF first.
-4. **No Tailwind.** No build tools. No npm.
-5. **If stuck > 15 min** → write in Blockers log → skip → continue.
-6. **Ship > polish.** Day 3 is a hard stop.
-
----
-
-*Any change to this file = new commit. Do not edit silently.*
