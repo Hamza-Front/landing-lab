@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="بروجيم معلا — سلسلة صالات رياضية في سوريا. 9 فروع، 500+ مدرب، تخصص سباحة ولياقة وكمال أجسام. جلسة تجريبية مجانية.">
+
+  <meta property="og:title" content="بروجيم معلا | 9 فروع · 500+ مدرب · عائلة أبطال">
+  <meta property="og:description" content="سلسلة صالات رياضية في دمشق واللاذقية. سباحة، كمال أجسام، لياقة، آيروبيك.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>بروجيم معلا | 9 فروع · 500+ مدرب · عائلة أبطال</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏊</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"IBM Plex Sans Arabic"', 'system-ui', 'sans-serif'] },
+          colors: {
+            coral: { DEFAULT: '#FC5F2B', dark: '#E8531F', soft: '#FF8B64' },
+            ink:   { DEFAULT: '#18181B', deep: '#101014' },
+            brand: { DEFAULT: '#0A4D8C', dark: '#063566', light: '#E6F0FA' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "بروجيم معلا",
+    "alternateName": "Pro Gym Moualla",
+    "description": "سلسلة صالات رياضية في سوريا متخصصة بالسباحة وكمال الأجسام واللياقة والآيروبيك",
+    "telephone": "+963994224527",
+    "email": "hamzaCourses0@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "أوتوستراد المزة",
+      "addressLocality": "دمشق",
+      "addressCountry": "SY"
+    },
+    "areaServed": ["دمشق", "ريف دمشق", "اللاذقية", "جبلة"],
+    "priceRange": "SYP"
+  }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    html.js .reveal.is-visible { opacity: 1; transform: none; }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .35s ease;
+    }
+    .faq-answer > div { overflow: hidden; }
+    .faq-item.is-open .faq-answer { grid-template-rows: 1fr; }
+    .faq-icon { transition: transform .3s ease; }
+    .faq-item.is-open .faq-icon { transform: rotate(45deg); }
+
+    @keyframes formPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(252,95,43,0); }
+      50%      { box-shadow: 0 0 0 6px rgba(252,95,43,.25); }
+    }
+    .form-pulse { animation: formPulse 1.2s ease 1; }
+
+    button[type="submit"]:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-ink antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 focus:bg-ink focus:text-white focus:px-5 focus:py-3 focus:rounded-full focus:z-[999]">
+    تخطَّ إلى المحتوى
+  </a>
+
+  <!-- ============ NAV ============ -->
+  <header id="navbar" class="fixed top-4 inset-x-0 z-50 px-4">
+    <nav class="max-w-6xl mx-auto bg-ink/95 backdrop-blur rounded-full px-4 py-2.5 flex items-center justify-between shadow-lg">
+      <a href="#" class="text-white font-bold text-xl flex items-center gap-2">
+        <span class="w-8 h-8 bg-coral rounded-full flex items-center justify-center text-sm">PM</span>
+        بروجيم معلا
+      </a>
+
+      <ul class="hidden lg:flex gap-5 text-sm text-white/70 font-medium">
+        <li><a href="#branches" class="hover:text-white transition">الفروع</a></li>
+        <li><a href="#for-who"  class="hover:text-white transition">لمن نقدم</a></li>
+        <li><a href="#services" class="hover:text-white transition">الخدمات</a></li>
+        <li><a href="#story"    class="hover:text-white transition">قصتنا</a></li>
+        <li><a href="#faq"      class="hover:text-white transition">الأسئلة</a></li>
+      </ul>
+
+      <a href="#booking" class="hidden md:inline-flex bg-coral hover:bg-coral-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">
+        احجز جلستك
+      </a>
+
+      <button id="menuToggle" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden text-white p-2">
+        <svg id="iconMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden max-w-6xl mx-auto mt-2 bg-ink rounded-2xl overflow-hidden shadow-lg">
+      <ul class="flex flex-col p-4 gap-1 text-white/80">
+        <li><a href="#branches" class="block py-2.5 hover:text-white">الفروع</a></li>
+        <li><a href="#for-who"  class="block py-2.5 hover:text-white">لمن نقدم</a></li>
+        <li><a href="#services" class="block py-2.5 hover:text-white">الخدمات</a></li>
+        <li><a href="#story"    class="block py-2.5 hover:text-white">قصتنا</a></li>
+        <li><a href="#faq"      class="block py-2.5 hover:text-white">الأسئلة</a></li>
+        <li><a href="#booking"  class="block bg-coral text-white text-center font-semibold py-3 rounded-full mt-2">احجز جلستك</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative min-h-[100dvh] flex items-center text-white overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(16,16,20,.6)_0%,rgba(16,16,20,.95)_100%),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80')] bg-cover bg-center"></div>
+
+      <div class="max-w-6xl mx-auto px-6 pt-32 pb-20 w-full">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/15 rounded-full px-4 py-1.5 mb-6 text-xs">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse" aria-hidden="true"></span>
+          <span class="text-white/90">9 فروع · 500+ مدرب · منذ عقود في سوريا</span>
+        </div>
+
+        <p class="text-coral-soft text-xs font-semibold tracking-widest uppercase mb-4">
+          بروجيم معلا · سلسلة صالات رياضية
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-normal leading-[1.05] tracking-tight mb-6 max-w-4xl">
+          من السباحة إلى كمال الأجسام،<br>
+          <span class="text-coral">أبطال يصنعون أبطالاً.</span>
+        </h1>
+
+        <p class="text-white/80 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">
+          سلسلة صالات رياضية أسستها عائلة أبطال عالم في السباحة. 9 فروع في دمشق واللاذقية، وأكثر من 500 مدرب — لتجد مكانك الذي يليق بك.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 mb-12">
+          <a href="#branches" class="inline-flex items-center justify-center bg-coral hover:bg-coral-dark text-white font-semibold px-8 py-4 rounded-full transition">
+            اعرف أقرب فرع لك
+          </a>
+          <a href="#booking" class="inline-flex items-center justify-center border border-white/30 hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-full transition">
+            احجز جلسة تجريبية مجانية
+          </a>
+        </div>
+
+        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/70">
+          <li class="flex items-center gap-2">✓ جلسة أولى مجانية</li>
+          <li class="flex items-center gap-2">✓ +500 مدرب معتمد</li>
+          <li class="flex items-center gap-2">✓ تخصص سباحة</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="py-16 md:py-20 bg-zinc-100">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-center text-coral text-sm font-semibold mb-8 reveal">
+          نبني الأبطال في سوريا منذ عقود — والحصيلة تتحدث
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="reveal">
+            <span class="block text-5xl md:text-6xl font-medium text-coral leading-none" data-counter="9">9</span>
+            <span class="block mt-3 text-sm text-zinc-500">فروع في سوريا</span>
+          </div>
+          <div class="reveal">
+            <span class="block text-5xl md:text-6xl font-medium text-coral leading-none" data-counter="500" data-prefix="+">+500</span>
+            <span class="block mt-3 text-sm text-zinc-500">مدرب معتمد</span>
+          </div>
+          <div class="reveal">
+            <span class="block text-5xl md:text-6xl font-medium text-coral leading-none" data-counter="5">5</span>
+            <span class="block mt-3 text-sm text-zinc-500">تخصصات رياضية</span>
+          </div>
+          <div class="reveal">
+            <span class="block text-5xl md:text-6xl font-medium text-coral leading-none" data-counter="100" data-prefix="+">+100</span>
+            <span class="block mt-3 text-sm text-zinc-500">بطولة وفعالية</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BRANCHES ============ -->
+    <section id="branches" class="py-20 md:py-28 bg-white scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <p class="text-coral text-xs font-semibold uppercase tracking-widest mb-3">الفروع</p>
+          <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4">9 فروع — واحد قريب منك</h2>
+          <p class="text-zinc-500 text-lg">اختر فرعك، واعرف موقعه ورقمه مباشرة.</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <!-- الجلاء -->
+          <article class="reveal bg-white border-2 border-coral rounded-2xl overflow-hidden flex flex-col">
+            <div class="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+              <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80"
+                   alt="فرع الجلاء — بروجيم معلا"
+                   loading="lazy" width="600" height="375"
+                   class="w-full h-full object-cover">
+              <span class="absolute top-3 right-3 bg-coral text-white text-xs font-bold px-3 py-1 rounded-full">الفرع الرئيسي</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-1">فرع الجلاء</h3>
+              <p class="text-sm text-coral font-semibold mb-3">دمشق · المزة</p>
+              <ul class="flex flex-col gap-2 text-sm text-zinc-600 mb-5">
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📍</span> أوتوستراد المزة</li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">☎</span> <a href="tel:+963994224527" dir="ltr" class="hover:underline">+963 994 224 527</a></li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📱</span> <a href="https://wa.me/963994224527" target="_blank" rel="noopener" dir="ltr" class="hover:underline">0994 224 527</a></li>
+              </ul>
+              <a href="#booking" data-branch="جلاء" class="mt-auto block text-center bg-coral hover:bg-coral-dark text-white text-sm font-semibold py-2.5 rounded-full transition">
+                احجز هنا
+              </a>
+            </div>
+          </article>
+
+          <!-- بردى -->
+          <article class="reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-xl transition duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+              <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=600&q=80"
+                   alt="فرع بردى — بروجيم معلا"
+                   loading="lazy" width="600" height="375"
+                   class="w-full h-full object-cover">
+              <span class="absolute top-3 right-3 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full">مسبح</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-1">فرع بردى</h3>
+              <p class="text-sm text-zinc-500 font-semibold mb-3">دمشق · المزرعة</p>
+              <ul class="flex flex-col gap-2 text-sm text-zinc-600 mb-5">
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📍</span> نادي ومسبح بردى الرياضي</li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">☎</span> <a href="tel:+963994224527" dir="ltr" class="hover:underline">+963 994 224 527</a></li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📱</span> <a href="https://wa.me/963994224527" target="_blank" rel="noopener" dir="ltr" class="hover:underline">0994 224 527</a></li>
+              </ul>
+              <a href="#booking" data-branch="بردى" class="mt-auto block text-center border border-ink text-ink hover:bg-ink hover:text-white text-sm font-semibold py-2.5 rounded-full transition">
+                احجز هنا
+              </a>
+            </div>
+          </article>
+
+          <!-- الغربية -->
+          <article class="reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-xl transition duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+              <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80"
+                   alt="فرع الغربية — بروجيم معلا"
+                   loading="lazy" width="600" height="375"
+                   class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-1">فرع الغربية</h3>
+              <p class="text-sm text-zinc-500 font-semibold mb-3">دمشق · المزة</p>
+              <ul class="flex flex-col gap-2 text-sm text-zinc-600 mb-5">
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📍</span> فيلات غربية</li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">☎</span> <a href="tel:+963994224527" dir="ltr" class="hover:underline">+963 994 224 527</a></li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📱</span> <a href="https://wa.me/963994224527" target="_blank" rel="noopener" dir="ltr" class="hover:underline">0994 224 527</a></li>
+              </ul>
+              <a href="#booking" data-branch="الغربية" class="mt-auto block text-center border border-ink text-ink hover:bg-ink hover:text-white text-sm font-semibold py-2.5 rounded-full transition">
+                احجز هنا
+              </a>
+            </div>
+          </article>
+
+          <!-- العباسيين -->
+          <article class="reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-xl transition duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+              <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                   alt="فرع العباسيين — بروجيم معلا"
+                   loading="lazy" width="600" height="375"
+                   class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-1">فرع العباسيين</h3>
+              <p class="text-sm text-zinc-500 font-semibold mb-3">دمشق · العباسيين</p>
+              <ul class="flex flex-col gap-2 text-sm text-zinc-600 mb-5">
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📍</span> منطقة العباسيين</li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">☎</span> <a href="tel:+963994224527" dir="ltr" class="hover:underline">+963 994 224 527</a></li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📱</span> <a href="https://wa.me/963994224527" target="_blank" rel="noopener" dir="ltr" class="hover:underline">0994 224 527</a></li>
+              </ul>
+              <a href="#booking" data-branch="العباسيين" class="mt-auto block text-center border border-ink text-ink hover:bg-ink hover:text-white text-sm font-semibold py-2.5 rounded-full transition">
+                احجز هنا
+              </a>
+            </div>
+          </article>
+
+          <!-- جبلة -->
+          <article class="reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-xl transition duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+              <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80"
+                   alt="فرع جبلة — بروجيم معلا"
+                   loading="lazy" width="600" height="375"
+                   class="w-full h-full object-cover">
+              <span class="absolute top-3 right-3 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full">شاطئ</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-1">فرع جبلة</h3>
+              <p class="text-sm text-zinc-500 font-semibold mb-3">اللاذقية · جبلة</p>
+              <ul class="flex flex-col gap-2 text-sm text-zinc-600 mb-5">
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📍</span> شاطئ بروجيم معلا</li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">☎</span> <a href="tel:+963994224527" dir="ltr" class="hover:underline">+963 994 224 527</a></li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📱</span> <a href="https://wa.me/963994224527" target="_blank" rel="noopener" dir="ltr" class="hover:underline">0994 224 527</a></li>
+              </ul>
+              <a href="#booking" data-branch="جبلة" class="mt-auto block text-center border border-ink text-ink hover:bg-ink hover:text-white text-sm font-semibold py-2.5 rounded-full transition">
+                احجز هنا
+              </a>
+            </div>
+          </article>
+
+          <!-- اللاذقية -->
+          <article class="reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-xl transition duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80"
+                   alt="فرع اللاذقية — بروجيم معلا"
+                   loading="lazy" width="600" height="375"
+                   class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-1">فرع اللاذقية</h3>
+              <p class="text-sm text-zinc-500 font-semibold mb-3">اللاذقية · الكورنيش الغربي</p>
+              <ul class="flex flex-col gap-2 text-sm text-zinc-600 mb-5">
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📍</span> الكورنيش الغربي، المشروع السابع</li>
+                <li class="flex items-start gap-2"><span class="text-coral shrink-0" aria-hidden="true">📱</span> <a href="https://wa.me/963994224527" target="_blank" rel="noopener" dir="ltr" class="hover:underline">0994 224 527</a></li>
+              </ul>
+              <a href="#booking" data-branch="اللاذقية" class="mt-auto block text-center border border-ink text-ink hover:bg-ink hover:text-white text-sm font-semibold py-2.5 rounded-full transition">
+                احجز هنا
+              </a>
+            </div>
+          </article>
+
+          <!-- قرية معلا -->
+          <article class="reveal bg-gradient-to-br from-brand/10 to-white border border-brand/30 rounded-2xl overflow-hidden flex flex-col md:col-span-2 lg:col-span-1">
+            <div class="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+              <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600&q=80"
+                   alt="قرية معلا — منتجع بروجيم معلا"
+                   loading="lazy" width="600" height="375"
+                   class="w-full h-full object-cover">
+              <span class="absolute top-3 right-3 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full">منتجع متكامل</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-1">قرية معلا</h3>
+              <p class="text-sm text-brand font-semibold mb-3">ريف دمشق · طريق المطار</p>
+              <ul class="flex flex-col gap-2 text-sm text-zinc-600 mb-5">
+                <li class="flex items-start gap-2"><span class="text-brand shrink-0" aria-hidden="true">📍</span> أول طريق المطار</li>
+                <li class="flex items-start gap-2"><span class="text-brand shrink-0" aria-hidden="true">📱</span> <a href="https://wa.me/963994224527" target="_blank" rel="noopener" dir="ltr" class="hover:underline">0994 224 527</a></li>
+                <li class="flex items-start gap-2 text-xs"><span class="text-brand shrink-0" aria-hidden="true">✦</span> مسابح · جاكوزي · ساونا · مطاعم · ألعاب أطفال</li>
+              </ul>
+              <a href="#booking" data-branch="قرية معلا" class="mt-auto block text-center bg-brand hover:bg-brand-dark text-white text-sm font-semibold py-2.5 rounded-full transition">
+                احجز هنا
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="text-center text-sm text-zinc-500 mt-10 reveal">
+          فرعان آخران قيد الإنجاز — تابعنا لمعرفة المزيد.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ QUALIFICATION ============ -->
+    <section id="for-who" class="py-20 md:py-28 bg-zinc-50 scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <p class="text-coral text-xs font-semibold uppercase tracking-widest mb-3">قبل أن تسجّل</p>
+          <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4">هل بروجيم معلا لك؟</h2>
+          <p class="text-zinc-500 text-lg">لا نستقبل الجميع. اختر بصدق — نختار كذلك.</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <div class="reveal p-8 md:p-10 bg-white border border-zinc-200 rounded-3xl">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xl font-bold" aria-hidden="true">✓</span>
+              <h3 class="text-2xl font-semibold">أنت في المكان الصحيح إذا…</h3>
+            </div>
+            <ul class="flex flex-col gap-4 text-zinc-700">
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✓</span>
+                <span>تبحث عن <strong class="text-ink">تخصص حقيقي</strong> — سباحة، كمال أجسام، آيروبيك — لا صالة تقدم كل شيء بشكل سطحي.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✓</span>
+                <span>امرأة تبحث عن <strong class="text-ink">بيئة نسائية محترمة</strong> بإشراف مدربات معتمدات.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✓</span>
+                <span>تريد أن يدرّبك <strong class="text-ink">أبطال حقيقيون</strong> — عائلة صنعت أبطال عالم في السباحة.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✓</span>
+                <span>تبحث عن <strong class="text-ink">منتجع متكامل</strong> للعائلة: مسابح، أطفال، مطاعم، ولياقة — في مكان واحد.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✓</span>
+                <span>مستعد للالتزام الجدي، وترى أن صحتك <strong class="text-ink">استثمار</strong> لا مصروف.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="reveal p-8 md:p-10 bg-white border border-zinc-200 rounded-3xl">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xl font-bold" aria-hidden="true">✕</span>
+              <h3 class="text-2xl font-semibold">بروجيم معلا ليست لك إذا…</h3>
+            </div>
+            <ul class="flex flex-col gap-4 text-zinc-700">
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✕</span>
+                <span>تبحث عن <strong class="text-ink">حلول سريعة</strong> بلا تغيير في نمط الحياة.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✕</span>
+                <span>تريد <strong class="text-ink">بطاقة عضوية</strong> فقط، ولا تنوي الالتزام بجدول.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✕</span>
+                <span>تبحث عن <strong class="text-ink">أرخص سعر</strong> لا أفضل تدريب.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✕</span>
+                <span>تفضل صالة <strong class="text-ink">مزدحمة بلا معايير</strong> حيث لا أحد يعرف اسمك.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold mt-0.5 shrink-0" aria-hidden="true">✕</span>
+                <span>لديك <strong class="text-ink">إصابة حرجة</strong> تحتاج علاجاً طبياً قبل أي تدريب.</span>
+              </li>
+            </ul>
+            <div class="mt-8 pt-6 border-t border-zinc-200">
+              <p class="text-sm text-zinc-500 leading-7">
+                إذا وجدت نفسك في العمود الأول — أنت من نعمل من أجله.
+                <a href="#booking" class="text-coral font-semibold hover:underline">احجز جلستك التجريبية</a>.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section id="process" class="py-20 md:py-28 bg-white scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <p class="text-coral text-xs font-semibold uppercase tracking-widest mb-3">كيف تبدأ</p>
+          <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4">ثلاث خطوات فقط</h2>
+          <p class="text-zinc-500 text-lg">من أول زيارة إلى أول تمرين — دون تعقيد.</p>
+        </header>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="reveal relative bg-zinc-50 rounded-3xl overflow-hidden border border-zinc-200 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+            <div class="aspect-[4/3] bg-gradient-to-br from-coral/20 to-coral/5 flex items-center justify-center relative">
+              <span class="absolute top-4 right-4 w-12 h-12 bg-coral text-white rounded-full flex items-center justify-center font-bold text-xl" aria-hidden="true">1</span>
+              <svg class="w-20 h-20 text-coral" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-semibold mb-3">اختر أقرب فرع</h3>
+              <p class="text-zinc-500 text-sm leading-7">
+                9 فروع في دمشق وريفها واللاذقية. اختر الأقرب، أو الأفضل لاحتياجك — بعض الفروع متخصصة.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal relative bg-zinc-50 rounded-3xl overflow-hidden border border-zinc-200 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+            <div class="aspect-[4/3] bg-gradient-to-br from-coral/20 to-coral/5 flex items-center justify-center relative">
+              <span class="absolute top-4 right-4 w-12 h-12 bg-coral text-white rounded-full flex items-center justify-center font-bold text-xl" aria-hidden="true">2</span>
+              <svg class="w-20 h-20 text-coral" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-semibold mb-3">احضر جلسة تجريبية مجانية</h3>
+              <p class="text-zinc-500 text-sm leading-7">
+                45 دقيقة في الفرع الذي اخترته. تتعرف على المدرب، تجرب المكان، وتحدد هدفك — بدون أي التزام.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal relative bg-zinc-50 rounded-3xl overflow-hidden border border-zinc-200 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+            <div class="aspect-[4/3] bg-gradient-to-br from-coral/20 to-coral/5 flex items-center justify-center relative">
+              <span class="absolute top-4 right-4 w-12 h-12 bg-coral text-white rounded-full flex items-center justify-center font-bold text-xl" aria-hidden="true">3</span>
+              <svg class="w-20 h-20 text-coral" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-semibold mb-3">اختر باقتك وابدأ</h3>
+              <p class="text-zinc-500 text-sm leading-7">
+                بعد الجلسة التجريبية، تختار باقتك المناسبة (شهرية، فصلية، سنوية). تبدأ التمرين فوراً بخطة مخصصة.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="py-20 md:py-28 bg-zinc-50 scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <p class="text-coral text-xs font-semibold uppercase tracking-widest mb-3">التخصصات</p>
+          <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4">5 رياضات تحت سقف واحد</h2>
+          <p class="text-zinc-500 text-lg">اضغط على أي تخصص لتحجز جلستك فيه مباشرة.</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <a href="#booking" data-service="سباحة"
+             class="service-card reveal block text-right p-8 bg-white border border-zinc-200 rounded-2xl hover:-translate-y-1 hover:shadow-xl hover:border-coral transition duration-300 cursor-pointer group">
+            <div class="w-14 h-14 rounded-full bg-brand-light flex items-center justify-center text-2xl mb-5" aria-hidden="true">🏊</div>
+            <h3 class="text-xl font-semibold mb-2 group-hover:text-coral transition">السباحة</h3>
+            <p class="text-zinc-500 text-sm leading-7 mb-4">تخصصنا الأول. مسابح أولمبية في بردى، جبلة، وقرية معلا. تدريب للمبتدئين والأبطال.</p>
+            <span class="text-coral text-sm font-semibold flex items-center gap-1">
+              احجز جلسة <span class="group-hover:-translate-x-1 transition-transform" aria-hidden="true">←</span>
+            </span>
+          </a>
+
+          <a href="#booking" data-service="كمال أجسام"
+             class="service-card reveal block text-right p-8 bg-white border border-zinc-200 rounded-2xl hover:-translate-y-1 hover:shadow-xl hover:border-coral transition duration-300 cursor-pointer group">
+            <div class="w-14 h-14 rounded-full bg-coral/10 flex items-center justify-center text-2xl mb-5" aria-hidden="true">💪</div>
+            <h3 class="text-xl font-semibold mb-2 group-hover:text-coral transition">كمال الأجسام</h3>
+            <p class="text-zinc-500 text-sm leading-7 mb-4">أحدث الآلات، بإشراف كوادر أكاديمية. برامج للنحت، التضخيم، والتنشيف.</p>
+            <span class="text-coral text-sm font-semibold flex items-center gap-1">
+              احجز جلسة <span class="group-hover:-translate-x-1 transition-transform" aria-hidden="true">←</span>
+            </span>
+          </a>
+
+          <a href="#booking" data-service="لياقة"
+             class="service-card reveal block text-right p-8 bg-white border border-zinc-200 rounded-2xl hover:-translate-y-1 hover:shadow-xl hover:border-coral transition duration-300 cursor-pointer group">
+            <div class="w-14 h-14 rounded-full bg-coral/10 flex items-center justify-center text-2xl mb-5" aria-hidden="true">🏃</div>
+            <h3 class="text-xl font-semibold mb-2 group-hover:text-coral transition">اللياقة البدنية</h3>
+            <p class="text-zinc-500 text-sm leading-7 mb-4">برامج لياقة شاملة لجميع الأعمار. تحسين اللياقة القلبية، المرونة، والقوة العامة.</p>
+            <span class="text-coral text-sm font-semibold flex items-center gap-1">
+              احجز جلسة <span class="group-hover:-translate-x-1 transition-transform" aria-hidden="true">←</span>
+            </span>
+          </a>
+
+          <a href="#booking" data-service="آيروبيك"
+             class="service-card reveal block text-right p-8 bg-white border border-zinc-200 rounded-2xl hover:-translate-y-1 hover:shadow-xl hover:border-coral transition duration-300 cursor-pointer group">
+            <div class="w-14 h-14 rounded-full bg-coral/10 flex items-center justify-center text-2xl mb-5" aria-hidden="true">💃</div>
+            <h3 class="text-xl font-semibold mb-2 group-hover:text-coral transition">الآيروبيك واللياقة النسائية</h3>
+            <p class="text-zinc-500 text-sm leading-7 mb-4">حصص نسائية بإشراف مدربات معتمدات. آيروبيك، زومبا، وبرامج نحت وتنحيف.</p>
+            <span class="text-coral text-sm font-semibold flex items-center gap-1">
+              احجز جلسة <span class="group-hover:-translate-x-1 transition-transform" aria-hidden="true">←</span>
+            </span>
+          </a>
+
+          <a href="#booking" data-service="قوة بدنية"
+             class="service-card reveal block text-right p-8 bg-white border border-zinc-200 rounded-2xl hover:-translate-y-1 hover:shadow-xl hover:border-coral transition duration-300 cursor-pointer group">
+            <div class="w-14 h-14 rounded-full bg-coral/10 flex items-center justify-center text-2xl mb-5" aria-hidden="true">🥊</div>
+            <h3 class="text-xl font-semibold mb-2 group-hover:text-coral transition">القوة البدنية والـ Body Combat</h3>
+            <p class="text-zinc-500 text-sm leading-7 mb-4">برامج قوة عالية الكثافة: TRX, HIIT, GRIT, Kick Boxing. بطولات داخلية سنوية.</p>
+            <span class="text-coral text-sm font-semibold flex items-center gap-1">
+              احجز جلسة <span class="group-hover:-translate-x-1 transition-transform" aria-hidden="true">←</span>
+            </span>
+          </a>
+
+          <a href="#booking" data-service="منتجع"
+             class="service-card reveal block text-right p-8 bg-gradient-to-br from-brand/5 to-white border border-brand/30 rounded-2xl hover:-translate-y-1 hover:shadow-xl hover:border-brand transition duration-300 cursor-pointer group">
+            <div class="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center text-2xl mb-5" aria-hidden="true">🌴</div>
+            <h3 class="text-xl font-semibold mb-2 group-hover:text-brand transition">منتجع قرية معلا</h3>
+            <p class="text-zinc-500 text-sm leading-7 mb-4">مسابح + ألعاب أطفال + جاكوزي + ساونا + مساج + مطاعم. تجربة رياضية كاملة للعائلة.</p>
+            <span class="text-brand text-sm font-semibold flex items-center gap-1">
+              احجز زيارة <span class="group-hover:-translate-x-1 transition-transform" aria-hidden="true">←</span>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section id="story" class="py-20 md:py-28 bg-white scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+          <div class="reveal order-2 md:order-1">
+            <p class="text-coral text-xs font-semibold uppercase tracking-widest mb-3">قصتنا</p>
+            <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-6 leading-tight">
+              عائلة واحدة…<br>
+              <span class="text-coral">صنعت أجيالاً من الأبطال.</span>
+            </h2>
+            <div class="space-y-4 text-zinc-600 leading-8">
+              <p>
+                بدأت الحكاية من الشغف بالسباحة. عائلة معلا، التي أنجبت أبطالاً عالميين في السباحة، قررت أن تحوّل هذا الشغف إلى مشروع يخدم كل السوريين.
+              </p>
+              <p>
+                من فرع صغير في دمشق، إلى 9 فروع ممتدة بين دمشق واللاذقية. من مسبح واحد، إلى مجموعة رياضية متكاملة تشمل السباحة، كمال الأجسام، اللياقة، والآيروبيك.
+              </p>
+              <p>
+                اليوم، يقود بروجيم معلا الأستاذ <strong class="text-ink">فراس معلا</strong>، رئيس الاتحاد الرياضي العام في سوريا. رؤيته: أن تكون الرياضة في متناول كل سوري، وأن تُصنع الأبطال في كل حي.
+              </p>
+              <p class="text-ink font-medium">
+                أكثر من <strong>500 مدرب</strong> من نخبة أبطال سوريا، ومئات الفعاليات الرياضية سنوياً — من تكريم الأبطال الأولمبيين إلى بطولات القوة البدنية والمهرجانات المائية.
+              </p>
+            </div>
+
+            <div class="mt-8 flex items-center gap-4">
+              <div class="w-14 h-14 rounded-full bg-coral text-white flex items-center justify-center font-bold text-lg" aria-hidden="true">م</div>
+              <div>
+                <p class="font-semibold text-ink">عائلة معلا</p>
+                <p class="text-sm text-zinc-500">مؤسسو بروجيم معلا · أبطال عالم في السباحة</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal order-1 md:order-2 relative">
+            <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-zinc-100">
+              <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80"
+                   alt="بروجيم معلا — عائلة أبطال"
+                   loading="lazy" width="800" height="1000"
+                   class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-coral text-white p-6 rounded-2xl shadow-xl max-w-[220px]">
+              <p class="text-3xl font-bold">9 فروع</p>
+              <p class="text-sm text-white/90 mt-1">في دمشق واللاذقية وريف دمشق</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="py-20 md:py-28 bg-zinc-50 scroll-mt-24">
+      <div class="max-w-3xl mx-auto px-6">
+        <header class="text-center mb-14 reveal">
+          <p class="text-coral text-xs font-semibold uppercase tracking-widest mb-3">الأسئلة الشائعة</p>
+          <h2 class="text-4xl md:text-5xl font-medium tracking-tight">أسئلة تدور في بالك؟</h2>
+        </header>
+
+        <div class="flex flex-col gap-3">
+
+          <article class="faq-item reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-zinc-300 transition">
+            <button class="faq-question w-full text-right p-6 flex items-center justify-between gap-4 font-semibold" aria-expanded="false">
+              <span>هل تختلف الأسعار بين الفروع؟</span>
+              <span class="faq-icon text-coral text-2xl leading-none shrink-0" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div><p class="px-6 pb-6 text-zinc-500 text-sm leading-7">نعم، تختلف قليلاً حسب الفرع وحسب الباقة. الفروع الرئيسية في دمشق (الجلاء، بردى، الغربية) لديها أسعار موحدة، وفرعا الساحل (جبلة واللاذقية) لديهما أسعار مختلفة. منتجع قرية معلا له تسعير خاص يشمل استخدام المرافق الكاملة.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-zinc-300 transition">
+            <button class="faq-question w-full text-right p-6 flex items-center justify-between gap-4 font-semibold" aria-expanded="false">
+              <span>هل هناك حصص نسائية؟</span>
+              <span class="faq-icon text-coral text-2xl leading-none shrink-0" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div><p class="px-6 pb-6 text-zinc-500 text-sm leading-7">نعم، لدينا حصص نسائية بإشراف مدربات معتمدات مثل الكوتش منال المصري وزويا جمعة. تشمل الآيروبيك، الزومبا، وبرامج النحت والتنحيف. للحصول على جدول الحصص في فرعك، تواصل معنا عبر الواتساب.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-zinc-300 transition">
+            <button class="faq-question w-full text-right p-6 flex items-center justify-between gap-4 font-semibold" aria-expanded="false">
+              <span>هل التدريب مناسب للمبتدئين؟</span>
+              <span class="faq-icon text-coral text-2xl leading-none shrink-0" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div><p class="px-6 pb-6 text-zinc-500 text-sm leading-7">بالتأكيد. لدينا برامج مخصصة للمبتدئين في كل فرع. نبدأ من الصفر: تعلم الحركات الأساسية، بناء العادات، ثم التقدم التدريجي. لا حاجة لأي خبرة سابقة.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-zinc-300 transition">
+            <button class="faq-question w-full text-right p-6 flex items-center justify-between gap-4 font-semibold" aria-expanded="false">
+              <span>ما الذي يميز بروجيم معلا عن غيرها؟</span>
+              <span class="faq-icon text-coral text-2xl leading-none shrink-0" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div><p class="px-6 pb-6 text-zinc-500 text-sm leading-7">ثلاثة أشياء: (1) أسستنا عائلة معلا، أبطال عالم في السباحة — لدينا خبرة حقيقية لا تُشترى. (2) 500+ مدرب معتمد، وليس 5 أو 10. (3) 9 فروع في سوريا — أحد أكبر السلاسل الرياضية المحلية.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-zinc-300 transition">
+            <button class="faq-question w-full text-right p-6 flex items-center justify-between gap-4 font-semibold" aria-expanded="false">
+              <span>هل يمكن الاشتراك في أكثر من فرع؟</span>
+              <span class="faq-icon text-coral text-2xl leading-none shrink-0" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div><p class="px-6 pb-6 text-zinc-500 text-sm leading-7">نعم، لدينا باقات متعددة الفروع بأسعار تفضيلية. اسأل عن "الباقة الشاملة" عند التواصل معنا — تتيح لك استخدام جميع فروعنا في دمشق وريفها.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-zinc-300 transition">
+            <button class="faq-question w-full text-right p-6 flex items-center justify-between gap-4 font-semibold" aria-expanded="false">
+              <span>هل هناك التزام طويل الأمد؟</span>
+              <span class="faq-icon text-coral text-2xl leading-none shrink-0" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div><p class="px-6 pb-6 text-zinc-500 text-sm leading-7">لدينا باقات شهرية، فصلية، وسنوية. يمكنك البدء بالباقة الشهرية، وإذا ارتحت ننصحك بالانتقال لباقة أطول للاستفادة من السعر الأفضل. لا إجبار على أي التزام طويل.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-zinc-300 transition">
+            <button class="faq-question w-full text-right p-6 flex items-center justify-between gap-4 font-semibold" aria-expanded="false">
+              <span>ما هي سياسة الإلغاء؟</span>
+              <span class="faq-icon text-coral text-2xl leading-none shrink-0" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div><p class="px-6 pb-6 text-zinc-500 text-sm leading-7">يمكنك إلغاء تجديد اشتراكك قبل 7 أيام من تاريخ التجديد، دون أي رسوم. نُعيد أي رسوم غير مستخدمة بشكل عادل. الهدف أن تبقى لأنك مرتاح — لا لأنك مجبر.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item reveal bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-zinc-300 transition">
+            <button class="faq-question w-full text-right p-6 flex items-center justify-between gap-4 font-semibold" aria-expanded="false">
+              <span>هل يمكن الدفع بالدولار الأمريكي؟</span>
+              <span class="faq-icon text-coral text-2xl leading-none shrink-0" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div><p class="px-6 pb-6 text-zinc-500 text-sm leading-7">نعم، نقبل الدفع بالليرة السورية أو بالدولار الأمريكي. سعر الصرف يُحدَّث دورياً لضمان العدالة. للحصول على التسعير بالدولار في فرعك، تواصل معنا عبر الواتساب.</p></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section id="booking" class="py-20 md:py-28 bg-ink-deep text-white scroll-mt-24">
+      <div class="max-w-2xl mx-auto px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4 reveal">جاهز تبدأ؟</h2>
+        <p class="text-white/70 text-lg mb-10 reveal">املأ النموذج، اختر فرعك واهتمامك، وسنتواصل معك خلال 24 ساعة — جلسة تجريبية مجانية 45 دقيقة، بدون التزام.</p>
+
+        <!-- ⚠️ استبدل YOUR_FORMSPREE_ID بمعرّف النموذج من formspree.io -->
+        <form id="bookingForm" name="booking" method="POST" action="https://formspree.io/f/moevvywe"
+              class="flex flex-col gap-3 text-right reveal rounded-3xl">
+
+          <input type="hidden" name="selected_branch"  id="selectedBranch"  value="">
+          <input type="hidden" name="selected_service" id="selectedService" value="">
+          <input type="hidden" name="selected_trainer" id="selectedTrainer" value="">
+
+          <!-- Formspree honeypot -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+
+          <div id="selectionBadge"
+               class="hidden items-center justify-between gap-3 bg-coral/10 border border-coral/30 text-white text-sm rounded-2xl px-4 py-3">
+            <span>اخترت: <strong id="badgeText" class="text-coral">—</strong></span>
+            <button type="button" id="clearSelection" class="text-white/60 hover:text-white text-xs underline">إلغاء</button>
+          </div>
+
+          <label for="name" class="sr-only">الاسم الكامل</label>
+          <input type="text" id="name" name="name" required
+                 maxlength="80" minlength="2"
+                 pattern="^[\u0600-\u06FFA-Za-z][\u0600-\u06FFA-Za-z\s'.-]*[\u0600-\u06FFA-Za-z]$"
+                 title="الاسم يجب أن يحتوي على أحرف فقط (عربية أو إنجليزية)، بدون أرقام"
+                 autocomplete="name"
+                 placeholder="اسمك الكامل"
+                 class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-coral focus:bg-white/10 transition">
+
+          <label for="phone" class="sr-only">رقم الواتساب</label>
+          <input type="tel" id="phone" name="phone" required
+                 pattern="^[0-9+\s\-().]+$"
+                 title="رقم سوري صحيح: 0991234567 أو +963991234567 (يمكن استخدام المسافات)"
+                 autocomplete="tel"
+                 inputmode="tel"
+                 dir="ltr"
+                 placeholder="رقم الواتساب (مثال: 0991234567)"
+                 class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-coral focus:bg-white/10 transition">
+
+          <label for="branchSelect" class="sr-only">اختر الفرع</label>
+          <select name="branch" id="branchSelect" required
+                  class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-coral focus:bg-white/10 transition">
+            <option value=""              class="text-ink">اختر الفرع الأقرب لك</option>
+            <option value="جلاء"          class="text-ink">فرع الجلاء — المزة، أوتوستراد</option>
+            <option value="بردى"          class="text-ink">فرع بردى — المزرعة</option>
+            <option value="الغربية"       class="text-ink">فرع الغربية — المزة</option>
+            <option value="العباسيين"     class="text-ink">فرع العباسيين — دمشق</option>
+            <option value="جبلة"          class="text-ink">فرع جبلة — اللاذقية</option>
+            <option value="اللاذقية"      class="text-ink">فرع اللاذقية — الكورنيش الغربي</option>
+            <option value="قرية معلا"     class="text-ink">قرية معلا — طريق المطار</option>
+          </select>
+
+          <label for="serviceSelect" class="sr-only">اختر الخدمة</label>
+          <select name="service" id="serviceSelect" required
+                  class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-coral focus:bg-white/10 transition">
+            <option value=""           class="text-ink">ما هو اهتمامك؟</option>
+            <option value="سباحة"      class="text-ink">سباحة</option>
+            <option value="كمال أجسام" class="text-ink">كمال أجسام</option>
+            <option value="لياقة"      class="text-ink">لياقة بدنية</option>
+            <option value="آيروبيك"    class="text-ink">آيروبيك / حصص نسائية</option>
+            <option value="قوة بدنية"  class="text-ink">قوة بدنية / Body Combat</option>
+            <option value="منتجع"      class="text-ink">منتجع عائلي (قرية معلا)</option>
+          </select>
+
+          <label for="trainerSelect" class="sr-only">اختر مدرب (اختياري)</label>
+          <select name="trainer" id="trainerSelect"
+                  class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-coral focus:bg-white/10 transition">
+            <option value=""               class="text-ink">هل لديك مدرب مفضل؟ (اختياري)</option>
+            <option value="Wagdy Hasson"       class="text-ink">Wagdy Hasson (وجدى حسون) — كمال أجسام</option>
+            <option value="Abdalhamed Mohamad" class="text-ink">Abdalhamed Mohamad (عبد الحميد محمد) — تغذية وإصابات</option>
+            <option value="Abdulrahman AlHamal" class="text-ink">Abdulrahman AlHamal (عبد الرحمن الحمال) — لياقة</option>
+            <option value="Manal Al-Masri"     class="text-ink">Coach Manal Al-Masri (منال المصري) — حصص نسائية</option>
+            <option value="Zoya Jumaa"         class="text-ink">Coach Zoya Jumaa (زويا جمعة) — حصص نسائية</option>
+            <option value="Maha Shami"         class="text-ink">Coach Maha Shami (مها الشامي) — نحت وتنحيف</option>
+            <option value="Rama Abbas"         class="text-ink">Coach Rama Abbas (راما عبّاس) — لياقة</option>
+            <option value="Alaa Sebai"         class="text-ink">Alaa Sebai — آيروبيك</option>
+            <option value="no-preference"      class="text-ink">لا يهم، ساعدوني في اختيار الأنسب</option>
+          </select>
+
+          <button type="submit"
+                  class="mt-2 bg-coral hover:bg-coral-dark text-white font-semibold px-8 py-4 rounded-full transition disabled:opacity-60 disabled:cursor-not-allowed">
+            أرسل الطلب واحجز جلسة تجريبية
+          </button>
+
+          <p id="formMsg" role="status" aria-live="polite" class="text-sm mt-3 min-h-[1.25rem] text-center"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-ink text-zinc-300 py-14">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-right">
+      <div>
+        <p class="text-white font-bold text-xl">بروجيم معلا</p>
+        <p class="text-sm mt-2">سلسلة صالات رياضية في سوريا — عائلة أبطال.</p>
+        <p class="text-xs text-zinc-500 mt-3">الفرع الرئيسي: أوتوستراد المزة، دمشق</p>
+        <p class="text-xs text-zinc-500 mt-3">
+          <a href="mailto:HamzaCourses0@gmail.com" dir="ltr" class="hover:text-white">HamzaCourses0@gmail.com</a>
+        </p>
+        <p class="text-xs text-zinc-500 mt-1">
+          <a href="https://wa.me/963994224527" target="_blank" rel="noopener" dir="ltr" class="hover:text-white">+963 994 224 527</a>
+        </p>
+      </div>
+      <ul class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-3 text-sm md:col-start-3">
+        <li><a href="#branches" class="hover:text-white">الفروع</a></li>
+        <li><a href="#services" class="hover:text-white">الخدمات</a></li>
+        <li><a href="#story"    class="hover:text-white">قصتنا</a></li>
+        <li><a href="#faq"      class="hover:text-white">الأسئلة</a></li>
+        <li><a href="#booking"  class="hover:text-white">احجز</a></li>
+      </ul>
+      <p class="text-xs text-zinc-500 md:col-span-3 pt-6 border-t border-white/10">© 2026 بروجيم معلا. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/963994224527?text=مرحباً،%20أريد%20حجز%20جلسة%20تجريبية%20مجانية"
+     target="_blank" rel="noopener" aria-label="تواصل عبر واتساب"
+     class="fixed bottom-6 left-6 z-40 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-xl transition hover:scale-110">
+    <svg viewBox="0 0 24 24" class="w-7 h-7" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A11 11 0 0 0 3.2 17.4L2 22l4.7-1.2A11 11 0 1 0 20.5 3.5Zm-8.4 17a9 9 0 0 1-4.6-1.2l-.3-.2-2.8.7.8-2.7-.2-.3a9 9 0 1 1 7.1 3.7Zm5-6.6c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1s-1.2-.5-2.2-1.4c-.8-.7-1.4-1.6-1.5-1.9s0-.5.1-.6l.4-.5.3-.5v-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.7 2.7 4.2 3.8 1.5.7 2.1.7 2.9.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2c-.1-.1-.3-.2-.6-.3Z"/>
+    </svg>
+  </a>
+
+  <button id="toTop" type="button" aria-label="العودة للأعلى"
+          class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-ink text-white rounded-full flex items-center justify-center shadow-xl opacity-0 pointer-events-none transition-all duration-300">
+    ↑
+  </button>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
