@@ -1,64 +1,44 @@
-# Design Brief — بيت السعادة (مطعم)
+# BRIEF-restaurant.md
 
-> **قالب #1** — صفحة هبوط مطعم | Warm Editorial Aesthetic
-> **الحالة:** v1.2 — مكتمل
-> **التاريخ:** 2026-09-18
-
----
-
-## 🎯 1. الهدف والأعمال
-
-| # | السؤال | الإجابة |
-|---|--------|---------|
-| 1 | الهدف الأساسي | زيادة زيارات المطعم الفعلية (Foot Traffic) |
-| 2 | CTA الوحيد | "زُرنا اليوم — اعرف موقعنا" → Google Maps |
-| 3 | التميّز | تجربة دافئة + وصفات أصيلة ("طعم البيت… وأجواء تُحكى") |
-| 4 | نوع العميل | الباحثون عن سعادة أصيلة (25-45 سنة) |
-| 5 | مؤشر النجاح | 10% CTR على CTA (50 نقرة/500 زيارة أسبوعياً) |
+> Landing page for a local Syrian restaurant. First portfolio template.
+> **Status:** v1.2 — frozen. No new sections. No scope creep.
+> **Last updated:** 2026-09-18
+> **Branch:** `main` → `feat/restaurant-landing`
 
 ---
 
-## 👥 2. الجمهور المستهدف
+## 1. Problem
 
-| # | السؤال | الإجابة |
-|---|--------|---------|
-| 6 | متوسط العمر | 25-45 سنة |
-| 7 | الجهاز | Mobile-First (80% جوال، 15% تابلت، 5% ديسكتوب) |
-| 8 | المستوى التقني | متوسط إلى بسيط — لغة واضحة، أزرار كبيرة |
-| 9 | مصدر الزيارة | Google Search محلي → Instagram → Google Maps |
+Restaurant has zero web presence. Customers find it only via word-of-mouth.
+Goal: drive foot traffic. Not "brand awareness", not "engagement".
+One metric: **map clicks**.
 
----
-
-## 📝 3. المحتوى
-
-| # | السؤال | الإجابة |
-|---|--------|---------|
-| 10 | H1 | "طعم البيت… وأجواء تُحكى" |
-| 11 | Sub-headline | "أطباق شامية أصيلة، وأجواء دافئة، في قلب المدينة" |
-| 12 | نص CTA | "زُرنا اليوم — اعرف موقعنا" |
-| 13 | الأقسام (7) | 1.Hero 2.عن المطعم 3.المنيو 4.التجربة 5.آراء 6.الموقع 7.CTA نهائي |
-| 14 | شعار/صور | **شعار:** Logotype نصي (Amiri، اسم فقط) — **صور:** Unsplash/Pexels مؤقتاً |
+| Metric | Target | How measured |
+|---|---|---|
+| CTA click rate | 10% | GA4 event `map_click` / pageviews |
+| Weekly visits | 500 | GA4 sessions |
+| Map clicks / week | 50 | GA4 event count |
 
 ---
 
-## 🎨 4. الهوية البصرية — Warm Editorial
+## 2. Audience
 
-| # | السؤال | الإجابة |
-|---|--------|---------|
-| 15 | الهوية | من الصفر — Design Tokens مخصصة (توليفة Amrit + GRAZA) |
-| 16 | النمط | فاتح، دافئ، ترابي — Editorial Homey |
-| 17 | مراجع بصرية | 1. **Amrit Palace** (عمق، لون واحد، لا ظلال) — 2. **GRAZA** (حياة، ودّية) — 3. **Brightland** (دفء الصور) |
-| 18 | صور | **حقيقية** — Food close-ups + أجواء (لا Stock مبتذل، لا رسومات) |
+- Age: 25–45. Mobile-first. 80% mobile, 15% tablet, 5% desktop.
+- Tech level: low-medium. No hamburger menus with 12 items. No dark patterns.
+- Entry points: Google local search → Instagram bio → Google Maps listing.
+- **Assumption:** first screen must answer "what is this + where is it" in <3s.
 
-### الألوان (WCAG AA Verified)
+---
 
-```css
---canvas:             #faf5ee;  /* الخلفية الأساسية */
---surface:            #f2e8d8;  /* طبقة ثانية */
---border:             #e5d9c5;  /* hairline */
---text-main:          #2e2822;  /* نص رئيسي — 13.67:1 ✅ */
---text-sub:           #6b6157;  /* نص فرعي — 5.73:1 ✅ */
---text-muted:         #9a8f82;  /* للديكور فقط — 2.86:1 ⚠️ */
---text-muted-strong:  #6f6559;  /* للنص الثانوي المهم — 4.5:1 ✅ */
---accent:             #a8441a;  /* التراكوتا — CTA — 5.35:1 ✅ */
---accent-joy:         #d9a935;  /* لمسات صغيرة فقط */
+## 3. Content
+
+### Copy (final, no lorem ipsum)
+
+| Slot | Text |
+|---|---|
+| H1 | طعم البيت… وأجواء تُحكى |
+| Sub | أطباق شامية أصيلة، وأجواء دافئة، في قلب المدينة |
+| CTA | زُرنا اليوم — اعرف موقعنا |
+| CTA (mobile sticky) | زُرنا اليوم |
+
+### Sections (7, in order)
