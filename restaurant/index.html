@@ -3,54 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="بيت السعادة — مطعم شامي يقدم أطباقاً بيتية أصيلة في أجواء دافئة. زُرنا اليوم.">
-    <title>بيت السعادة — مطعم شامي أصيل</title>
 
+    <title>بيت السعادة | مطعم شامي في دمشق</title>
+    <meta name="description" content="أطباق شامية أصيلة وأجواء دافئة في قلب دمشق. زُرنا اليوم واعرف موقعنا.">
+    <link rel="canonical" href="https://hamza-front.github.io/landing-lab/restaurant/">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#a8441a">
 
-    <!-- الخطوط -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="بيت السعادة | مطعم شامي في دمشق">
+    <meta property="og:description" content="أطباق شامية أصيلة وأجواء دافئة في قلب دمشق.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80">
+    <meta property="og:url" content="https://hamza-front.github.io/landing-lab/restaurant/">
+    <meta property="og:locale" content="ar_SY">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="بيت السعادة | مطعم شامي في دمشق">
+    <meta name="twitter:description" content="أطباق شامية أصيلة وأجواء دافئة في قلب دمشق.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400&family=Cairo:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;600&family=Tajawal:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "بيت السعادة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "شارع الحمرا، بناء 12، الطابق الأرضي",
+            "addressLocality": "دمشق",
+            "addressCountry": "SY"
+        },
+        "telephone": "+963-XX-XXX-XXXX",
+        "servesCuisine": "Syrian",
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "12:00", "closes": "00:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "14:00", "closes": "01:00" }
+        ]
+    }
+    </script>
 </head>
+
 <body>
 
-    <!-- رابط تخطي المحتوى -->
     <a href="#main" class="skip-link">تخطى إلى المحتوى الرئيسي</a>
 
-    <!-- الهيدر -->
     <header class="site-header">
         <div class="container site-header__inner">
             <span class="logo">بيت السعادة</span>
 
             <nav class="site-nav" aria-label="التنقل الرئيسي">
                 <a href="#about" class="site-nav__link">عن المطعم</a>
+                <a href="#features" class="site-nav__link">مميزاتنا</a>
                 <a href="#menu" class="site-nav__link">المنيو</a>
                 <a href="#experience" class="site-nav__link">الأجواء</a>
                 <a href="#location" class="site-nav__link">زُرنا</a>
             </nav>
 
-            <a href="#location" class="btn btn--outline" data-cta>زُرنا اليوم</a>
+            <a href="https://www.google.com/maps/place/%D8%A8%D9%86%D8%A7%D8%A1+12%E2%80%AD/@33.5276812,36.2878078,13848m/data=!3m1!1e3!4m10!1m2!2m1!1z2LTYp9ix2Lkg2KfZhNit2YXYsdin2Iwg2KjZhtin2KEgMTLYjCDYp9mE2LfYp9io2YIg2KfZhNij2LHYttmKICDYr9mF2LTZgtiMINiz2YjYsdmK2Kc!3m6!1s0x1518df43a66ca2e5:0x39614152dbc9b396!8m2!3d33.5285754!4d36.2056361!15sClbYtNin2LHYuSDYp9mE2K3Zhdix2KfYjCDYqNmG2KfYoSAxMtiMINin2YTYt9in2KjZgiDYp9mE2KPYsdi22YogINiv2YXYtNmC2Iwg2LPZiNix2YrYp-ABAA!16s%2Fg%2F11ldrhlyyd?entry=ttu"
+               target="_blank" rel="noopener"
+               class="btn btn--outline">
+                زُرنا اليوم
+            </a>
         </div>
     </header>
 
     <main id="main">
 
-        <!-- Hero -->
         <section class="hero">
             <div class="container hero__inner">
                 <div class="hero__content">
                     <p class="hero__eyebrow">منذ 2004</p>
-                    <h1 class="hero__title">دفء المطبخ الشامي على مائدتك</h1>
-                    <p class="hero__lead">
-                        في بيت السعادة نُعِدّ أطباقنا بمكونات طازجة ووصفات توارثناها جيلاً بعد جيل.
-                        تجربة طعام تشبه الجلوس في بيت العائلة.
-                    </p>
+                    <h1 class="hero__title">طعم البيت… وأجواء تُحكى</h1>
+                    <p class="hero__lead">أطباق شامية أصيلة، وأجواء دافئة، في قلب المدينة.</p>
                     <div class="hero__actions">
-                        <a href="#menu" class="btn btn--primary">تصفّح المنيو</a>
-                        <a href="#location" class="btn btn--ghost">موقعنا</a>
+                        <a href="https://www.google.com/maps/place/%D8%A8%D9%86%D8%A7%D8%A1+12%E2%80%AD/@33.5276812,36.2878078,13848m/data=!3m1!1e3!4m10!1m2!2m1!1z2LTYp9ix2Lkg2KfZhNit2YXYsdin2Iwg2KjZhtin2KEgMTLYjCDYp9mE2LfYp9io2YIg2KfZhNij2LHYttmKICDYr9mF2LTZgtiMINiz2YjYsdmK2Kc!3m6!1s0x1518df43a66ca2e5:0x39614152dbc9b396!8m2!3d33.5285754!4d36.2056361!15sClbYtNin2LHYuSDYp9mE2K3Zhdix2KfYjCDYqNmG2KfYoSAxMtiMINin2YTYt9in2KjZgiDYp9mE2KPYsdi22YogINiv2YXYtNmC2Iwg2LPZiNix2YrYp-ABAA!16s%2Fg%2F11ldrhlyyd?entry=ttu"
+                           target="_blank" rel="noopener"
+                           class="btn btn--primary">
+                            زُرنا اليوم — اعرف موقعنا
+                        </a>
                     </div>
                 </div>
 
@@ -65,15 +111,12 @@
                         sizes="(min-width: 1024px) 50vw, 100vw"
                         alt="أجواء داخل مطعم بيت السعادة"
                         width="1200" height="800"
-                        loading="eager"
-                        fetchpriority="high"
-                        decoding="async"
+                        loading="eager" fetchpriority="high" decoding="async"
                         class="hero__img">
                 </figure>
             </div>
         </section>
 
-        <!-- About -->
         <section id="about" class="about">
             <div class="container about__inner">
                 <div class="about__text">
@@ -92,26 +135,27 @@
                         src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=900&q=80"
                         alt="طبق شامي تقليدي"
                         width="900" height="600"
-                        loading="lazy"
-                        decoding="async">
+                        loading="lazy" decoding="async">
                 </figure>
             </div>
         </section>
 
-        <!-- Features -->
-        <section class="features">
+        <section id="features" class="features">
             <div class="container">
                 <h2 class="section-title">لماذا بيت السعادة؟</h2>
                 <div class="features__grid">
                     <article class="feature">
+                        <span class="feature__icon" aria-hidden="true">🌿</span>
                         <h3 class="feature__title">مكونات طازجة يومياً</h3>
                         <p class="feature__desc">نختار خضارنا ولحومنا من السوق المحلي كل صباح.</p>
                     </article>
                     <article class="feature">
+                        <span class="feature__icon" aria-hidden="true">📖</span>
                         <h3 class="feature__title">وصفات عائلية</h3>
                         <p class="feature__desc">توارثناها جيلاً بعد جيل منذ عشرين عاماً.</p>
                     </article>
                     <article class="feature">
+                        <span class="feature__icon" aria-hidden="true">🔥</span>
                         <h3 class="feature__title">أجواء دافئة</h3>
                         <p class="feature__desc">تصميم داخلي يعيدك إلى دفء المطبخ الشامي.</p>
                     </article>
@@ -119,15 +163,16 @@
             </div>
         </section>
 
-        <!-- Menu -->
         <section id="menu" class="menu">
             <div class="container">
                 <h2 class="section-title">من قائمة الطعام</h2>
                 <div class="menu__grid">
+
                     <article class="dish">
                         <figure class="dish__media">
                             <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80"
-                                 alt="طبق كباب" width="800" height="600" loading="lazy" decoding="async">
+                                 alt="طبق كباب حلبي مشوي على الفحم" width="800" height="600"
+                                 loading="lazy" decoding="async">
                         </figure>
                         <h3 class="dish__title">كباب حلبي</h3>
                         <p class="dish__desc">لحم مشوي على الفحم مع خضار طازجة وخبز تنور.</p>
@@ -136,7 +181,8 @@
                     <article class="dish">
                         <figure class="dish__media">
                             <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
-                                 alt="طبق فتّوش" width="800" height="600" loading="lazy" decoding="async">
+                                 alt="طبق فتّوش شامي" width="800" height="600"
+                                 loading="lazy" decoding="async">
                         </figure>
                         <h3 class="dish__title">فتّوش شامي</h3>
                         <p class="dish__desc">خضار مقرمشة مع دبس الرمان وخبز محمّص.</p>
@@ -145,21 +191,38 @@
                     <article class="dish">
                         <figure class="dish__media">
                             <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80"
-                                 alt="طبق كنافة" width="800" height="600" loading="lazy" decoding="async">
+                                 alt="طبق كنافة نابلسية" width="800" height="600"
+                                 loading="lazy" decoding="async">
                         </figure>
                         <h3 class="dish__title">كنافة نابلسية</h3>
                         <p class="dish__desc">حلوى شرقية ساخنة بالجبن الطازج والقطر.</p>
                     </article>
+
+                    <article class="dish">
+                        <h3 class="dish__title">حمّص بالطحينة</h3>
+                        <p class="dish__desc">حمّص كريمي مع زيت زيتون بكر وحبوب الحمّص الكاملة.</p>
+                    </article>
+
+                    <article class="dish">
+                        <h3 class="dish__title">كبة مقلية</h3>
+                        <p class="dish__desc">كبة برغل محشوة باللحم والمكسرات، مقلية طازجة.</p>
+                    </article>
+
+                    <article class="dish">
+                        <h3 class="dish__title">تبولة</h3>
+                        <p class="dish__desc">بقدونس وبرغل وليمون ونعنع، منعشة وخفيفة.</p>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <!-- Experience -->
         <section id="experience" class="experience">
             <div class="container experience__inner">
                 <figure class="experience__media">
                     <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1000&q=80"
-                         alt="أجواء المطعم الداخلية" width="1000" height="700" loading="lazy" decoding="async">
+                         alt="أجواء المطعم الداخلية" width="1000" height="700"
+                         loading="lazy" decoding="async">
                 </figure>
                 <div class="experience__text">
                     <h2 class="section-title">تجربة تشبه البيت</h2>
@@ -185,7 +248,6 @@
             </div>
         </section>
 
-        <!-- Quotes -->
         <section class="quotes">
             <div class="container">
                 <h2 class="section-title">ماذا قال زوارنا؟</h2>
@@ -206,7 +268,6 @@
             </div>
         </section>
 
-        <!-- Location -->
         <section id="location" class="location">
             <div class="container location__inner">
                 <div class="location__text">
@@ -225,31 +286,58 @@
                             <dd>2:00 عصراً — 1:00 بعد منتصف الليل</dd>
                         </div>
                     </dl>
-                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                    <a href="https://www.google.com/maps/place/%D8%A8%D9%86%D8%A7%D8%A1+12%E2%80%AD/@33.5276812,36.2878078,13848m/data=!3m1!1e3!4m10!1m2!2m1!1z2LTYp9ix2Lkg2KfZhNit2YXYsdin2Iwg2KjZhtin2KEgMTLYjCDYp9mE2LfYp9io2YIg2KfZhNij2LHYttmKICDYr9mF2LTZgtiMINiz2YjYsdmK2Kc!3m6!1s0x1518df43a66ca2e5:0x39614152dbc9b396!8m2!3d33.5285754!4d36.2056361!15sClbYtNin2LHYuSDYp9mE2K3Zhdix2KfYjCDYqNmG2KfYoSAxMtiMINin2YTYt9in2KjZgiDYp9mE2KPYsdi22YogINiv2YXYtNmC2Iwg2LPZiNix2YrYp-ABAA!16s%2Fg%2F11ldrhlyyd?entry=ttu"
+                       target="_blank" rel="noopener"
+                       class="btn btn--primary">
                         افتح في خرائط جوجل
                     </a>
                 </div>
                 <figure class="location__media">
                     <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1000&q=80"
-                         alt="واجهة المطعم من الخارج" width="1000" height="700" loading="lazy" decoding="async">
+                         alt="واجهة المطعم من الخارج" width="1000" height="700"
+                         loading="lazy" decoding="async">
                 </figure>
+            </div>
+        </section>
+
+        <section class="cta-final">
+            <div class="container cta-final__inner">
+                <h2 class="cta-final__title">طعم البيت ينتظرك</h2>
+                <p class="cta-final__lead">زُرنا اليوم واعرف موقعنا على الخريطة.</p>
+                <a href="https://www.google.com/maps/place/%D8%A8%D9%86%D8%A7%D8%A1+12%E2%80%AD/@33.5276812,36.2878078,13848m/data=!3m1!1e3!4m10!1m2!2m1!1z2LTYp9ix2Lkg2KfZhNit2YXYsdin2Iwg2KjZhtin2KEgMTLYjCDYp9mE2LfYp9io2YIg2KfZhNij2LHYttmKICDYr9mF2LTZgtiMINiz2YjYsdmK2Kc!3m6!1s0x1518df43a66ca2e5:0x39614152dbc9b396!8m2!3d33.5285754!4d36.2056361!15sClbYtNin2LHYuSDYp9mE2K3Zhdix2KfYjCDYqNmG2KfYoSAxMtiMINin2YTYt9in2KjZgiDYp9mE2KPYsdi22YogINiv2YXYtNmC2Iwg2LPZiNix2YrYp-ABAA!16s%2Fg%2F11ldrhlyyd?entry=ttu"
+                   target="_blank" rel="noopener"
+                   class="btn btn--primary">
+                    زُرنا اليوم — اعرف موقعنا
+                </a>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container site-footer__inner">
-            <span class="logo">بيت السعادة</span>
-            <p class="site-footer__copy">© 2026 بيت السعادة. جميع الحقوق محفوظة.</p>
+            <div class="site-footer__brand">
+                <span class="logo">بيت السعادة</span>
+                <p class="site-footer__copy">© 2026 بيت السعادة. جميع الحقوق محفوظة.</p>
+            </div>
+
             <nav class="site-footer__nav" aria-label="تنقل سفلي">
+                <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.google.com/maps/place/%D8%A8%D9%86%D8%A7%D8%A1+12%E2%80%AD/@33.5276812,36.2878078,13848m/data=!3m1!1e3!4m10!1m2!2m1!1z2LTYp9ix2Lkg2KfZhNit2YXYsdin2Iwg2KjZhtin2KEgMTLYjCDYp9mE2LfYp9io2YIg2KfZhNij2LHYttmKICDYr9mF2LTZgtiMINiz2YjYsdmK2Kc!3m6!1s0x1518df43a66ca2e5:0x39614152dbc9b396!8m2!3d33.5285754!4d36.2056361!15sClbYtNin2LHYuSDYp9mE2K3Zhdix2KfYjCDYqNmG2KfYoSAxMtiMINin2YTYt9in2KjZgiDYp9mE2KPYsdi22YogINiv2YXYtNmC2Iwg2LPZiNix2YrYp-ABAA!16s%2Fg%2F11ldrhlyyd?entry=ttu" target="_blank" rel="noopener">الموقع على الخريطة</a>
                 <a href="#about">عن المطعم</a>
                 <a href="#menu">المنيو</a>
                 <a href="#location">زُرنا</a>
             </nav>
+
+            <div class="site-footer__credit">
+                <span>تصميم وتطوير</span>
+                <a href="https://github.com/Hamza-Front" target="_blank" rel="noopener">
+                    Hamza — Frontend Developer
+                </a>
+            </div>
         </div>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>

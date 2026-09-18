@@ -1,8 +1,4 @@
-/* ==========================================================================
-   Design Tokens
-   ========================================================================== */
 :root {
-    /* الألوان */
     --bg: #faf5ee;
     --canvas: #ffffff;
     --surface: #f2e8d8;
@@ -13,7 +9,6 @@
     --accent-hover: #8a3714;
     --accent-soft: #f5e0d3;
 
-    /* المسافات (نظام 8px) */
     --space-1: 8px;
     --space-2: 16px;
     --space-3: 24px;
@@ -23,26 +18,16 @@
     --space-8: 64px;
     --space-10: 96px;
 
-    /* الحواف */
     --radius-sm: 6px;
-    --radius-md: 10px;
     --radius-card: 14px;
     --radius-pill: 999px;
 
-    /* الخطوط */
     --font-heading: 'Cairo', system-ui, sans-serif;
     --font-body: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+    --font-ui: 'Tajawal', system-ui, sans-serif;
     --font-logo: 'Amiri', serif;
-
-    /* ظلال */
-    --shadow-sm: 0 1px 2px rgb(46 40 34 / 0.05);
-    --shadow-md: 0 4px 12px rgb(46 40 34 / 0.08);
-    --shadow-lg: 0 12px 32px rgb(46 40 34 / 0.12);
 }
 
-/* ==========================================================================
-   Reset & Base
-   ========================================================================== */
 *,
 *::before,
 *::after {
@@ -80,9 +65,6 @@ button {
     font-family: inherit;
 }
 
-/* ==========================================================================
-   Layout
-   ========================================================================== */
 .container {
     width: 100%;
     max-width: 1120px;
@@ -107,9 +89,6 @@ section[id] {
     line-height: 1.3;
 }
 
-/* ==========================================================================
-   Skip Link (Accessibility)
-   ========================================================================== */
 .skip-link {
     position: absolute;
     top: -60px;
@@ -119,7 +98,7 @@ section[id] {
     padding: 10px 20px;
     font-weight: 600;
     z-index: 1000;
-    border-bottom-left-radius: var(--radius-md);
+    border-bottom-left-radius: var(--radius-sm);
     transition: top 0.2s ease;
 }
 
@@ -129,9 +108,6 @@ section[id] {
     outline-offset: 2px;
 }
 
-/* ==========================================================================
-   Header
-   ========================================================================== */
 .site-header {
     position: sticky;
     top: 0;
@@ -153,14 +129,11 @@ section[id] {
 .logo {
     font-family: var(--font-logo);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--accent);
     letter-spacing: 0.5px;
 }
 
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
 .site-nav {
     display: none;
     gap: var(--space-3);
@@ -173,8 +146,9 @@ section[id] {
 }
 
 .site-nav__link {
+    font-family: var(--font-ui);
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-sub);
     transition: color 0.2s ease;
     position: relative;
@@ -202,17 +176,15 @@ section[id] {
     width: 100%;
 }
 
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-1);
     padding: 10px 20px;
+    font-family: var(--font-ui);
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: var(--radius-pill);
     border: 2px solid transparent;
     cursor: pointer;
@@ -260,9 +232,6 @@ section[id] {
     background-color: var(--surface);
 }
 
-/* ==========================================================================
-   Hero
-   ========================================================================== */
 .hero {
     padding-block: var(--space-10) var(--space-8);
 }
@@ -283,8 +252,9 @@ section[id] {
 
 .hero__eyebrow {
     display: inline-block;
+    font-family: var(--font-ui);
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
     color: var(--accent);
     background: var(--accent-soft);
@@ -295,15 +265,15 @@ section[id] {
 
 .hero__title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
     margin-bottom: var(--space-3);
     color: var(--text);
 }
 
 .hero__lead {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     color: var(--text-sub);
     max-width: 52ch;
     margin-bottom: var(--space-4);
@@ -318,7 +288,7 @@ section[id] {
 .hero__media {
     border-radius: var(--radius-card);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
     aspect-ratio: 4 / 3;
 }
 
@@ -328,11 +298,9 @@ section[id] {
     object-fit: cover;
 }
 
-/* ==========================================================================
-   About
-   ========================================================================== */
 .about {
     background-color: var(--canvas);
+    border-block: 1px solid var(--border);
 }
 
 .about__inner {
@@ -361,7 +329,7 @@ section[id] {
 .about__media {
     border-radius: var(--radius-card);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
     aspect-ratio: 3 / 2;
 }
 
@@ -371,9 +339,6 @@ section[id] {
     object-fit: cover;
 }
 
-/* ==========================================================================
-   Features
-   ========================================================================== */
 .features {
     padding-block: var(--space-8);
 }
@@ -395,12 +360,19 @@ section[id] {
     border: 1px solid var(--border);
     border-radius: var(--radius-card);
     padding: var(--space-4);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .feature:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.feature__icon {
+    display: inline-block;
+    font-size: 1.875rem;
+    line-height: 1;
+    margin-bottom: var(--space-2);
 }
 
 .feature__title {
@@ -416,11 +388,9 @@ section[id] {
     font-size: 15px;
 }
 
-/* ==========================================================================
-   Menu
-   ========================================================================== */
 .menu {
     background-color: var(--canvas);
+    border-block: 1px solid var(--border);
 }
 
 .menu__grid {
@@ -446,12 +416,12 @@ section[id] {
     border: 1px solid var(--border);
     border-radius: var(--radius-card);
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .dish:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+    background: var(--accent-soft);
 }
 
 .dish__media {
@@ -485,9 +455,10 @@ section[id] {
     font-size: 15px;
 }
 
-/* ==========================================================================
-   Experience
-   ========================================================================== */
+.dish:not(:has(.dish__media)) .dish__title {
+    padding-top: var(--space-4);
+}
+
 .experience__inner {
     display: grid;
     grid-template-columns: 1fr;
@@ -505,7 +476,7 @@ section[id] {
 .experience__media {
     border-radius: var(--radius-card);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
     aspect-ratio: 5 / 4;
 }
 
@@ -551,11 +522,9 @@ section[id] {
     font-weight: 500;
 }
 
-/* ==========================================================================
-   Quotes
-   ========================================================================== */
 .quotes {
     background-color: var(--canvas);
+    border-block: 1px solid var(--border);
 }
 
 .quotes__grid {
@@ -576,7 +545,7 @@ section[id] {
     border-radius: var(--radius-card);
     padding: var(--space-4);
     position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease;
 }
 
 .quote::before {
@@ -592,8 +561,7 @@ section[id] {
 }
 
 .quote:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
 }
 
 .quote p {
@@ -606,14 +574,12 @@ section[id] {
 .quote cite {
     display: block;
     font-style: normal;
+    font-family: var(--font-ui);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--accent);
 }
 
-/* ==========================================================================
-   Location
-   ========================================================================== */
 .location__inner {
     display: grid;
     grid-template-columns: 1fr;
@@ -663,7 +629,8 @@ section[id] {
 }
 
 .location__hours dt {
-    font-weight: 600;
+    font-family: var(--font-ui);
+    font-weight: 500;
     color: var(--text);
     font-size: 15px;
 }
@@ -676,7 +643,7 @@ section[id] {
 .location__media {
     border-radius: var(--radius-card);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
     aspect-ratio: 5 / 4;
 }
 
@@ -686,14 +653,38 @@ section[id] {
     object-fit: cover;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+.cta-final {
+    background: var(--surface);
+    border-block: 1px solid var(--border);
+    text-align: center;
+}
+
+.cta-final__inner {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.cta-final__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.cta-final__lead {
+    color: var(--text-sub);
+    font-size: 1.0625rem;
+}
+
 .site-footer {
     background: var(--text);
     color: var(--canvas);
     padding-block: var(--space-5);
-    margin-top: var(--space-8);
+    border-top: 1px solid var(--border);
 }
 
 .site-footer__inner {
@@ -701,15 +692,22 @@ section[id] {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: var(--space-2);
+    gap: var(--space-3);
 }
 
 @media (min-width: 768px) {
     .site-footer__inner {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         text-align: right;
     }
+}
+
+.site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .site-footer .logo {
@@ -717,18 +715,21 @@ section[id] {
 }
 
 .site-footer__copy {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.75;
 }
 
 .site-footer__nav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--space-3);
+    font-family: var(--font-ui);
     font-size: 14px;
 }
 
 .site-footer__nav a {
-    opacity: 0.85;
+    opacity: 0.9;
     transition: opacity 0.2s ease;
 }
 
@@ -737,18 +738,35 @@ section[id] {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   Accessibility — Focus Visible
-   ========================================================================== */
+.site-footer__credit {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+
+.site-footer__credit span {
+    opacity: 0.6;
+}
+
+.site-footer__credit a {
+    font-weight: 500;
+    opacity: 0.95;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.site-footer__credit a:hover {
+    border-bottom-color: var(--canvas);
+}
+
 :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
     border-radius: var(--radius-sm);
 }
 
-/* ==========================================================================
-   Reduced Motion
-   ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -760,15 +778,13 @@ section[id] {
     }
 }
 
-/* ==========================================================================
-   Print
-   ========================================================================== */
 @media print {
     .site-header,
     .site-footer,
     .btn,
     .skip-link,
-    .hero__actions {
+    .hero__actions,
+    .cta-final {
         display: none !important;
     }
 
@@ -802,7 +818,6 @@ section[id] {
     .dish__media {
         max-width: 100%;
         page-break-inside: avoid;
-        box-shadow: none;
     }
 
     a[href]::after {
